@@ -40,6 +40,9 @@ public class PlayerInput : MonoBehaviour
                 case RuntimePlatform.IPhonePlayer:
                     _inputDevice = new PhoneInputDevice();
                     break;
+                default:
+                    _inputDevice = new PCInputDevice();
+                    break;
             }
         }
     }
